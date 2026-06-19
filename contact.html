@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Harshil Chavan</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FAFAFC;
+        }
+
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, .75);
+            backdrop-filter: blur(14px);
+        }
+
+        .purple-glow {
+            position: absolute;
+            top: -250px;
+            right: -250px;
+            width: 800px;
+            height: 800px;
+
+            background: radial-gradient(circle,
+                    rgba(168, 85, 247, .22) 0%,
+                    rgba(168, 85, 247, 0) 70%);
+
+            filter: blur(80px);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="purple-glow"></div>
+
+    <header class="fixed top-6 left-1/2 -translate-x-1/2 z-50">
+
+        <nav class="glass-nav border border-gray-200 rounded-full px-8 py-4 shadow-sm">
+
+            <div class="flex items-center gap-10">
+
+                <a class="font-bold text-purple-900">
+                    HC
+                </a>
+
+                <a href="home.html" class="text-gray-600 hover:text-purple-600 transition">
+                    Home
+                </a>
+
+                <a href="about.html" class="text-gray-600 hover:text-purple-600 transition">
+                    About
+                </a>
+
+                <a href="work.html" class="text-gray-600 hover:text-purple-600 transition">
+                    Work
+                </a>
+
+                <a href="contact.html"
+                    class="bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 transition">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <section class="pt-40 pb-20">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <span class="text-purple-600 uppercase tracking-widest font-semibold text-sm">
+                Contact
+            </span>
+
+            <h1 class="heading-font text-6xl md:text-7xl font-bold text-gray-900 mt-6">
+                Let's Build
+                <br>
+                Something Great.
+            </h1>
+
+            <p class="text-xl text-gray-500 max-w-3xl mt-8">
+                Have a project or opportunity?
+                Let's talk.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="pb-32">
+
+        <div class="max-w-7xl mx-auto px-8">
+
+            <div class="grid lg:grid-cols-2 gap-12">
+
+                <div>
+
+                    <h2 class="heading-font text-4xl font-bold mb-8">
+                        Get In Touch
+                    </h2>
+
+                    <div class="space-y-6">
+
+                        <div class="bg-white p-6 rounded-3xl border">
+                            <p class="text-gray-500">Email</p>
+                            <p class="font-medium">
+                                harshilchavan22@gmail.com
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-3xl border">
+                            <p class="text-gray-500">Phone</p>
+                            <p class="font-medium">
+                                +91 70965 88023
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-3xl border">
+                            <p class="text-gray-500">Location</p>
+                            <p class="font-medium">
+                                Vadodara, Gujarat, India
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="bg-white rounded-[32px] p-8 border shadow-sm">
+
+                    <h2 class="heading-font text-3xl font-bold mb-8">
+                        Send a Message
+                    </h2>
+
+                    <form id="contactForm">
+
+                        <input id="name" type="text" placeholder="Name" required
+                            class="w-full border rounded-2xl px-5 py-4 mb-4">
+
+                        <input id="email" type="email" placeholder="Email" required
+                            class="w-full border rounded-2xl px-5 py-4 mb-4">
+
+                        <input id="subject" type="text" placeholder="Subject" required
+                            class="w-full border rounded-2xl px-5 py-4 mb-4">
+
+                        <textarea id="message" rows="6" placeholder="Message" required
+                            class="w-full border rounded-2xl px-5 py-4 mb-4"></textarea>
+
+                        <button type="submit" class="w-full bg-purple-600 text-white py-4 rounded-2xl">
+
+                            Send Message
+
+                        </button>
+
+                        <p id="status" class="mt-4 text-center text-green-600 font-medium">
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        const SCRIPT_URL =
+            "https://script.google.com/macros/s/AKfycbxXgL5fYsOqdNThbUffgXM-GWhzluEg4DkEXU-UYrseY111BK_JdczB14s0wMn-dHFITQ/exec";
+
+        document
+            .getElementById("contactForm")
+            .addEventListener("submit", async function (e) {
+
+                e.preventDefault();
+
+                const status =
+                    document.getElementById("status");
+
+                const data = {
+
+                    name:
+                        document.getElementById("name").value,
+
+                    email:
+                        document.getElementById("email").value,
+
+                    subject:
+                        document.getElementById("subject").value,
+
+                    message:
+                        document.getElementById("message").value
+
+                };
+
+                status.innerText = "Sending...";
+
+                try {
+
+                    await fetch(SCRIPT_URL, {
+                        method: "POST",
+                        body: JSON.stringify(data)
+                    });
+
+                    status.innerText =
+                        "Message sent successfully!";
+
+                    document
+                        .getElementById("contactForm")
+                        .reset();
+
+                }
+                catch (err) {
+
+                    status.innerText =
+                        "Failed to send message.";
+
+                }
+
+            });
+
+    </script>
+
+    <!-- FOOTER -->
+
+    <footer class="border-t border-gray-200 mt-32">
+
+        <div class="max-w-7xl mx-auto px-8 py-12">
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+
+                <!-- Logo -->
+
+                <div>
+
+                    <h2 class="text-2xl font-bold text-gray-900">
+                        HC<span class="text-purple-600">.</span>
+                    </h2>
+
+                    <p class="text-gray-500 mt-2">
+                        Designed & Developed by Harshil Chavan
+                    </p>
+
+                </div>
+
+                <!-- Social Links -->
+
+                <div class="flex items-center gap-5">
+
+                    <!-- LinkedIn -->
+
+                    <a href="https://www.linkedin.com/in/harshil-chavan-326569322/" target="_blank"
+                        class="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white transition-all duration-300">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <!-- Instagram -->
+
+                    <a href="https://www.instagram.com/harxhil.ishotasf/" target="_blank"
+                        class="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white transition-all duration-300">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+                    <!-- GitHub -->
+
+                    <a href="https://github.com/Harxhil" target="_blank"
+                        class="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white transition-all duration-300">
+
+                        <i class="fab fa-github"></i>
+
+                    </a>
+
+                    <!-- WhatsApp -->
+
+                    <a href="https://wa.me/917096588023" target="_blank"
+                        class="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center hover:bg-purple-600 hover:text-white transition-all duration-300">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="mt-8 pt-8 border-t border-gray-100 text-center">
+
+                <p class="text-gray-500 text-sm">
+                    © 2026 Harshil Chavan. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
