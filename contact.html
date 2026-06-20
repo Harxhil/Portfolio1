@@ -64,20 +64,20 @@
                     HC
                 </a>
 
-                <a href="home.html" class="text-gray-600 hover:text-purple-600 transition">
+                <a href="home.html" class="ajax-link text-gray-600 hover:text-purple-600 transition">
                     Home
                 </a>
 
-                <a href="about.html" class="text-gray-600 hover:text-purple-600 transition">
+                <a href="about.html" class="ajax-link text-gray-600 hover:text-purple-600 transition">
                     About
                 </a>
 
-                <a href="work.html" class="text-gray-600 hover:text-purple-600 transition">
+                <a href="work.html" class="ajax-link text-gray-600 hover:text-purple-600 transition">
                     Work
                 </a>
 
                 <a href="contact.html"
-                    class="bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 transition">
+                    class="ajax-link bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 transition">
                     Contact
                 </a>
 
@@ -87,164 +87,168 @@
 
     </header>
 
-    <section class="pt-40 pb-20">
 
-        <div class="max-w-7xl mx-auto px-8">
+    <main id="content">
 
-            <span class="text-purple-600 uppercase tracking-widest font-semibold text-sm">
-                Contact
-            </span>
+        <section class="pt-40 pb-20">
 
-            <h1 class="heading-font text-6xl md:text-7xl font-bold text-gray-900 mt-6">
-                Let's Build
-                <br>
-                Something Great.
-            </h1>
+            <div class="max-w-7xl mx-auto px-8">
 
-            <p class="text-xl text-gray-500 max-w-3xl mt-8">
-                Have a project or opportunity?
-                Let's talk.
-            </p>
+                <span class="text-purple-600 uppercase tracking-widest font-semibold text-sm">
+                    Contact
+                </span>
 
-        </div>
+                <h1 class="heading-font text-6xl md:text-7xl font-bold text-gray-900 mt-6">
+                    Let's Build
+                    <br>
+                    Something Great.
+                </h1>
 
-    </section>
+                <p class="text-xl text-gray-500 max-w-3xl mt-8">
+                    Have a project or opportunity?
+                    Let's talk.
+                </p>
 
-    <section class="pb-32">
+            </div>
 
-        <div class="max-w-7xl mx-auto px-8">
+        </section>
 
-            <div class="grid lg:grid-cols-2 gap-12">
+        <section class="pb-32">
 
-                <div>
+            <div class="max-w-7xl mx-auto px-8">
 
-                    <h2 class="heading-font text-4xl font-bold mb-8">
-                        Get In Touch
-                    </h2>
+                <div class="grid lg:grid-cols-2 gap-12">
 
-                    <div class="space-y-6">
+                    <div>
 
-                        <div class="bg-white p-6 rounded-3xl border">
-                            <p class="text-gray-500">Email</p>
-                            <p class="font-medium">
-                                harshilchavan22@gmail.com
-                            </p>
+                        <h2 class="heading-font text-4xl font-bold mb-8">
+                            Get In Touch
+                        </h2>
+
+                        <div class="space-y-6">
+
+                            <div class="bg-white p-6 rounded-3xl border">
+                                <p class="text-gray-500">Email</p>
+                                <p class="font-medium">
+                                    harshilchavan22@gmail.com
+                                </p>
+                            </div>
+
+                            <div class="bg-white p-6 rounded-3xl border">
+                                <p class="text-gray-500">Phone</p>
+                                <p class="font-medium">
+                                    +91 70965 88023
+                                </p>
+                            </div>
+
+                            <div class="bg-white p-6 rounded-3xl border">
+                                <p class="text-gray-500">Location</p>
+                                <p class="font-medium">
+                                    Vadodara, Gujarat, India
+                                </p>
+                            </div>
+
                         </div>
 
-                        <div class="bg-white p-6 rounded-3xl border">
-                            <p class="text-gray-500">Phone</p>
-                            <p class="font-medium">
-                                +91 70965 88023
-                            </p>
-                        </div>
+                    </div>
 
-                        <div class="bg-white p-6 rounded-3xl border">
-                            <p class="text-gray-500">Location</p>
-                            <p class="font-medium">
-                                Vadodara, Gujarat, India
+                    <div class="bg-white rounded-[32px] p-8 border shadow-sm">
+
+                        <h2 class="heading-font text-3xl font-bold mb-8">
+                            Send a Message
+                        </h2>
+
+                        <form id="contactForm">
+
+                            <input id="name" type="text" placeholder="Name" required
+                                class="w-full border rounded-2xl px-5 py-4 mb-4">
+
+                            <input id="email" type="email" placeholder="Email" required
+                                class="w-full border rounded-2xl px-5 py-4 mb-4">
+
+                            <input id="subject" type="text" placeholder="Subject" required
+                                class="w-full border rounded-2xl px-5 py-4 mb-4">
+
+                            <textarea id="message" rows="6" placeholder="Message" required
+                                class="w-full border rounded-2xl px-5 py-4 mb-4"></textarea>
+
+                            <button type="submit" class="w-full bg-purple-600 text-white py-4 rounded-2xl">
+
+                                Send Message
+
+                            </button>
+
+                            <p id="status" class="mt-4 text-center text-green-600 font-medium">
                             </p>
-                        </div>
+
+                        </form>
 
                     </div>
 
                 </div>
 
-                <div class="bg-white rounded-[32px] p-8 border shadow-sm">
-
-                    <h2 class="heading-font text-3xl font-bold mb-8">
-                        Send a Message
-                    </h2>
-
-                    <form id="contactForm">
-
-                        <input id="name" type="text" placeholder="Name" required
-                            class="w-full border rounded-2xl px-5 py-4 mb-4">
-
-                        <input id="email" type="email" placeholder="Email" required
-                            class="w-full border rounded-2xl px-5 py-4 mb-4">
-
-                        <input id="subject" type="text" placeholder="Subject" required
-                            class="w-full border rounded-2xl px-5 py-4 mb-4">
-
-                        <textarea id="message" rows="6" placeholder="Message" required
-                            class="w-full border rounded-2xl px-5 py-4 mb-4"></textarea>
-
-                        <button type="submit" class="w-full bg-purple-600 text-white py-4 rounded-2xl">
-
-                            Send Message
-
-                        </button>
-
-                        <p id="status" class="mt-4 text-center text-green-600 font-medium">
-                        </p>
-
-                    </form>
-
-                </div>
-
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <script>
 
-    <script>
+            const SCRIPT_URL =
+                "https://script.google.com/macros/s/AKfycbxXgL5fYsOqdNThbUffgXM-GWhzluEg4DkEXU-UYrseY111BK_JdczB14s0wMn-dHFITQ/exec";
 
-        const SCRIPT_URL =
-            "https://script.google.com/macros/s/AKfycbxXgL5fYsOqdNThbUffgXM-GWhzluEg4DkEXU-UYrseY111BK_JdczB14s0wMn-dHFITQ/exec";
+            document
+                .getElementById("contactForm")
+                .addEventListener("submit", async function (e) {
 
-        document
-            .getElementById("contactForm")
-            .addEventListener("submit", async function (e) {
+                    e.preventDefault();
 
-                e.preventDefault();
+                    const status =
+                        document.getElementById("status");
 
-                const status =
-                    document.getElementById("status");
+                    const data = {
 
-                const data = {
+                        name:
+                            document.getElementById("name").value,
 
-                    name:
-                        document.getElementById("name").value,
+                        email:
+                            document.getElementById("email").value,
 
-                    email:
-                        document.getElementById("email").value,
+                        subject:
+                            document.getElementById("subject").value,
 
-                    subject:
-                        document.getElementById("subject").value,
+                        message:
+                            document.getElementById("message").value
 
-                    message:
-                        document.getElementById("message").value
+                    };
 
-                };
+                    status.innerText = "Sending...";
 
-                status.innerText = "Sending...";
+                    try {
 
-                try {
+                        await fetch(SCRIPT_URL, {
+                            method: "POST",
+                            body: JSON.stringify(data)
+                        });
 
-                    await fetch(SCRIPT_URL, {
-                        method: "POST",
-                        body: JSON.stringify(data)
-                    });
+                        status.innerText =
+                            "Message sent successfully!";
 
-                    status.innerText =
-                        "Message sent successfully!";
+                        document
+                            .getElementById("contactForm")
+                            .reset();
 
-                    document
-                        .getElementById("contactForm")
-                        .reset();
+                    }
+                    catch (err) {
 
-                }
-                catch (err) {
+                        status.innerText =
+                            "Failed to send message.";
 
-                    status.innerText =
-                        "Failed to send message.";
+                    }
 
-                }
+                });
 
-            });
-
-    </script>
+        </script>
+    </main>
 
     <!-- FOOTER -->
 
@@ -323,7 +327,7 @@
         </div>
 
     </footer>
-
+    <script src="Assets/js/ajax.js"></script>
 </body>
 
 </html>
